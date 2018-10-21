@@ -1,0 +1,105 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+// ≥1200px
++media-breakpoint-down(lg)
+  header
+    .header-line
+      &-menu
+        ul
+          li
+            a
+              font-size: 16px
+              padding: 0 6px
+// ≥992px
++media-breakpoint-down(md)
+  header
+    .header-line
+      &-menu
+        display: none
+  .humb
+    display: block
+  .catalog
+    .recent-catalog-carousel
+      .catalog-item
+        &-info
+          display: block
+  .banner	
+    .main-banner
+      .banner-item
+        .banner-content
+          .banner-item-text
+            font-size: 25px
+// ≥768px
++media-breakpoint-down(sm)
+  .button-purple
+    font-size: 14px
+  .subscribe
+    &-content
+      .left-side
+        display: none
+      >div
+        width: 100%
+      .right-side
+        padding-right: 5%
+      h3
+        font-size: 30px
+      p
+        font-size: 16px
+      form
+        label
+          font-size: 16px
+        input[type=text]
+          width: 59%
+        .button-purple
+          width: 40%
+  .catalog
+    .recent-catalog-carousel
+      width: 100%
+    h4
+      font-size: 25px
+  .pagination-catalog
+    display: none
+  .collection
+    &-item
+      margin-bottom: 30px
+  footer
+    .footer
+      &-item
+        margin-bottom: 20px
+        font-size: 16px
+        a
+          font-size: 16px
+  
+
+// ≥576px
++media-breakpoint-down(xs)
+  header
+    height: 70px
+    .header-line
+      padding: 10px 0
+      .logo
+        img
+          height: 50px
+      .search
+        display: none
+      .header-user
+        margin-left: auto
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
