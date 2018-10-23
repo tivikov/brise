@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+  <!-- <base href="/"> -->
+
+  <title>Brise</title>
+  <meta name="description" content="">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Template Basic Images Start -->
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="icon" href="img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+  <!-- Template Basic Images End -->
+
+  <!-- Custom Browsers Color Start -->
+  <meta name="theme-color" content="#000">
+  <!-- Custom Browsers Color End -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="libs/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="libs/slick-carousel/slick/slick-theme.css">
+  <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="main-head">
+      <div class="container-fluid">
+        <div class="header-line">
+          <div class="humb">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="mobile-menu-wrap">
+            <div class="mobile-sidebar">
+              <div class="mobile-search">
+                <input type="text" id="search" placeholder="Cauta un produs...">
+                <i class="fa fa-search"></i>
+              </div>
+              <nav class="mobile-menu">
+                <ul>
+                  <li class="active"><a href="#">Rochii</a>
+                    <div class="submenu">
+                      <ul>
+                        <li><a href="#">Rochii de Zi</a></li>
+                        <li><a href="#">Rochii de Seara</a></li>
+                        <li class="active"><a href="#">Rochii Evenimente</a></li>
+                        <li><a href="#">Rochii de Birou</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="#">Topuri</a>
+                    <div class="submenu">
+                      <ul>
+                        <li><a href="#">Topuri de Zi</a></li>
+                        <li><a href="#">Topuri de Seara</a></li>
+                        <li class="active"><a href="#">Topuri Evenimente</a></li>
+                        <li><a href="#">Topuri de Birou</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="#">Fuste</a>
+                    <div class="submenu">
+                      <ul>
+                        <li><a href="#">Fuste de Zi</a></li>
+                        <li><a href="#">Fuste de Seara</a></li>
+                        <li class="active"><a href="#">Fuste Evenimente</a></li>
+                        <li><a href="#">Fuste de Birou</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="#">Pantaloni</a></li>
+                  <li><a href="#">Salopete</a></li>
+                  <li><a href="#">Jachete</a></li>
+                  <li><a href="#">Accesorii</a></li>
+                  <li><a href="#">Promotii</a></li>
+                </ul>
+              </nav>
+    
+            </div>
+          </div>
+          <div class="logo">
+            <a href="#"><img src="img/logo.png" alt=""></a>
+          </div>
+          <nav class="header-line-menu">
+            <ul>
+              <li class="active"><a href="#">Rochii</a>
+                <div class="submenu">
+                  <ul>
+                    <li><a href="#">Rochii de Zi</a></li>
+                    <li><a href="#">Rochii de Seara</a></li>
+                    <li class="active"><a href="#">Rochii Evenimente</a></li>
+                    <li><a href="#">Rochii de Birou</a></li>
+                  </ul>
+                  <div class="image-category">
+                    <img src="img/category-img.png" alt="">
+                  </div>
+                </div>
+              </li>
+              <li><a href="#">Topuri</a>
+                <div class="submenu">
+                  <ul>
+                    <li><a href="#">Topuri de Zi</a></li>
+                    <li><a href="#">Topuri de Seara</a></li>
+                    <li class="active"><a href="#">Topuri Evenimente</a></li>
+                    <li><a href="#">Topuri de Birou</a></li>
+                  </ul>
+                  <div class="image-category">
+                    <img src="img/category-img.png" alt="">
+                  </div>
+                </div>
+              </li>
+              <li><a href="#">Fuste</a>
+                <div class="submenu">
+                  <ul>
+                    <li><a href="#">Fuste de Zi</a></li>
+                    <li><a href="#">Fuste de Seara</a></li>
+                    <li class="active"><a href="#">Fuste Evenimente</a></li>
+                    <li><a href="#">Fuste de Birou</a></li>
+                  </ul>
+                  <div class="image-category">
+                    <img src="img/category-img.png" alt="">
+                  </div>
+                </div>
+              </li>
+              <li><a href="#">Pantaloni</a></li>
+              <li><a href="#">Salopete</a></li>
+              <li><a href="#">Jachete</a></li>
+              <li><a href="#">Accesorii</a></li>
+              <li><a href="#">Promotii</a></li>
+            </ul>
+          </nav>
+          <div class="search">
+            <input type="text" id="search" placeholder="Cauta un produs...">
+            <i class="fa fa-search"></i>
+          </div>
+          <div class="header-user header-icon">
+            <img src="img/icons/user.svg" alt="" class="icon">
+          </div>
+          <div class="header-cart header-icon">
+            <img src="img/icons/cart.svg" alt="" class="icon">
+            <span>12</span>
+          </div>
+          <div class="user-account brise-widget">
+            <form onsubmit="return false">
+              <div>
+                <input type="text" placeholder="Email">
+              </div>
+              <div>
+                <input type="password" placeholder="Parola">
+              </div>
+              <div>
+                <button type="submit" class="button">Intra in cont</button>
+              </div>
+            </form>
+            <div class="forget-pass">
+              <div>
+                Ai uitat parola? <a href="#">Click aici</a>
+              </div>
+              <div>
+                Nu ai cont?? <a href="#">Creeaza aici</a>
+              </div>
+            </div>
+          </div>
+          <div class="cart-widget brise-widget">
+            <div class="cart-widget-finally clearfix">
+              <div class="card-title float-left">Cos cumparaturi</div>
+              <div class="cart-total float-right">Total: 500Lei</div>
+            </div>
+            <hr>
+            <div class="cart-pay">
+              <a href="#" class="button-pay button">Cosul meu</a>
+            </div>
+            <hr>
+            <div class="cart-product-items">
+              <div class="cart-product-item d-flex justify-content-start">
+                <div class="cart-product-item-image">
+                  <img src="img/catalog-1.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="cart-product-item-info d-flex">
+                  <div class="cart-product-item-title">
+                    Bluza eleganta pentru tinuta
+                    business decupata la spate
+                  </div>
+                  <div class="cart-product-item-price-edit d-flex justify-content-between align-items-end">
+                    <div class="cart-product-item-price">
+                      <span class="old-price">150 RON</span>
+                      <span class="new-price">200 RON</span>
+                    </div>
+                    <div class="cart-product-item-edit">
+                      <a href="#" class="edit-product-cart">Editeaza</a>
+                      <a href="#" class="delete-product-cart">Sterge</a>
+                    </div>
+                  </div>
+    
+                </div>
+              </div>
+              <div class="cart-product-item d-flex justify-content-start">
+                <div class="cart-product-item-image">
+                  <img src="img/catalog-2.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="cart-product-item-info d-flex">
+                  <div class="cart-product-item-title">
+                    Rochie neagra in 2 culori
+                  </div>
+                  <div class="cart-product-item-price-edit d-flex justify-content-between align-items-end">
+                    <div class="cart-product-item-price">
+                      <span class="old-price">150 RON</span>
+                      <span class="new-price">200 RON</span>
+                    </div>
+                    <div class="cart-product-item-edit">
+                      <a href="#" class="edit-product-cart">Editeaza</a>
+                      <a href="#" class="delete-product-cart">Sterge</a>
+                    </div>
+                  </div>
+    
+                </div>
+              </div>
+              <div class="cart-product-item d-flex justify-content-start">
+                <div class="cart-product-item-image">
+                  <img src="img/catalog-3.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="cart-product-item-info d-flex">
+                  <div class="cart-product-item-title">
+                    Rochie lunga cu maneci
+                    scurte
+                  </div>
+                  <div class="cart-product-item-price-edit d-flex justify-content-between align-items-end">
+                    <div class="cart-product-item-price">
+                      <span class="price">200 RON</span>
+                    </div>
+                    <div class="cart-product-item-edit">
+                      <a href="#" class="edit-product-cart">Editeaza</a>
+                      <a href="#" class="delete-product-cart">Sterge</a>
+                    </div>
+                  </div>
+    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container-fluid">
+        <nav class="breadcrumb-nav">
+          <a href="#"><span>Catalog</span></a>
+          
+          <span>> Topuri</span>
+        </nav>
+      </div>
+    </div>
+
+    <section class="catalog-banner">
+      <div class="container-fluid">
+        <div class="banner-content" style="background-image: url('img/catalog-image.png')">
+          <div class="banner-text">
+            <h1>Topuri</h1>
+            <p>Bluze frumoase pentru serviciu și weekend-uri, ușor de asortat cu fuste șic
+              sau blugi casual. Avem topuri și bluze pentru orice stil - de la articole
+              cheie de sezon până la cele mai bune piese Basics.</p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+    <div class="catalog-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-2 col-md-3">
+            <aside class="catalog-filter">
+              <h3>Topuri</h3>
+              <hr>
+              <a href="#">Topuri casual</a>
+              <a href="#">Topuri de seara</a>
+              <a href="#">Topuri office</a>
+              <div class="filter-options">
+                <div class="filter-tabs">
+                  <div class="filter-tab">
+                    <div class="plus">+</div>
+                    <div class="tab-title">Pret</div>
+                    <div class="tab-inputs">
+                      <label>
+                        <input type="checkbox" name="pret">
+                        <span class="checkbox-value">36</span>
+                        <span class="checkmark"></span>
+                      </label>
+                      <label>
+                        <input type="checkbox" name="pret">
+                        <span class="checkbox-value">38</span>
+                        <span class="checkmark"></span>
+                      </label>
+                      <label>
+                        <input type="checkbox" name="pret">
+                        <span class="checkbox-value">40</span>
+                        <span class="checkmark"></span>
+                      </label>
+                      <label>
+                        <input type="checkbox" name="pret">
+                        <span class="checkbox-value">42</span>
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+          <div class="col-lg-10 col-md-9">
+            <div class="catalog-items">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="catalog-item">
+                    <div class="catalog-item-img">
+                      <img src="img/catalog-1.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="catalog-item-info">
+                      <div class="buttons">
+                        <a href="#" class="accent-button">
+                          <img src="img/icons/cart-white.svg" class="icon" alt="">
+                          <span>Adauga in cos</span>
+                        </a>
+                        <a href="#" class="view-button">
+                          <img src="img/icons/eye.svg" class="icon" alt="">
+                          <span>Vizualizare rapida</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="catalog-item-desc">
+                      <h5>Bluza eleganta pentru tinuta business decupata
+                        la spate</h5>
+                    </div>
+                    <div class="catalog-item-price">
+                      185 RON
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="catalog-item">
+                    <div class="catalog-item-img">
+                      <img src="img/catalog-2.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="catalog-item-info">
+                      <div class="buttons">
+                        <a href="#" class="accent-button">
+                          <img src="img/icons/cart-white.svg" class="icon" alt="">
+                          <span>Adauga in cos</span>
+                        </a>
+                        <a href="#" class="view-button">
+                          <img src="img/icons/eye.svg" class="icon" alt="">
+                          <span>Vizualizare rapida</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="catalog-item-desc">
+                      <h5>Bluza eleganta pentru tinuta business decupata
+                        la spate</h5>
+                    </div>
+                    <div class="catalog-item-price">
+                      185 RON
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="catalog-item">
+                    <div class="catalog-item-img">
+                      <img src="img/catalog-3.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="catalog-item-info">
+                      <div class="buttons">
+                        <a href="#" class="accent-button">
+                          <img src="img/icons/cart-white.svg" class="icon" alt="">
+                          <span>Adauga in cos</span>
+                        </a>
+                        <a href="#" class="view-button">
+                          <img src="img/icons/eye.svg" class="icon" alt="">
+                          <span>Vizualizare rapida</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="catalog-item-desc">
+                      <h5>Bluza eleganta pentru tinuta business decupata
+                        la spate</h5>
+                    </div>
+                    <div class="catalog-item-price">
+                      185 RON
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="catalog-item">
+                    <div class="discount">Promotie -25%</div>
+                    <div class="catalog-item-img">
+                      <img src="img/catalog-1.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="catalog-item-info">
+                      <div class="buttons">
+                        <a href="#" class="accent-button">
+                          <img src="img/icons/cart-white.svg" class="icon" alt="">
+                          <span>Adauga in cos</span>
+                        </a>
+                        <a href="#" class="view-button">
+                          <img src="img/icons/eye.svg" class="icon" alt="">
+                          <span>Vizualizare rapida</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="catalog-item-desc">
+                      <h5>Bluza eleganta pentru tinuta business decupata
+                        la spate</h5>
+                    </div>
+                    <div class="catalog-item-price">
+                      <strike>185 RON</strike>
+                      <span class="new-price">250 RON</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="catalog-item">
+                    <div class="discount">Promotie -25%</div>
+                    <div class="catalog-item-img">
+                      <img src="img/catalog-2.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="catalog-item-info">
+                      <div class="buttons">
+                        <a href="#" class="accent-button">
+                          <img src="img/icons/cart-white.svg" class="icon" alt="">
+                          <span>Adauga in cos</span>
+                        </a>
+                        <a href="#" class="view-button">
+                          <img src="img/icons/eye.svg" class="icon" alt="">
+                          <span>Vizualizare rapida</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="catalog-item-desc">
+                      <h5>Bluza eleganta pentru tinuta business decupata
+                        la spate</h5>
+                    </div>
+                    <div class="catalog-item-price">
+                      <strike>185 RON</strike>
+                      <span class="new-price">250 RON</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="catalog-item">
+                    <div class="discount">Promotie -25%</div>
+                    <div class="catalog-item-img">
+                      <img src="img/catalog-3.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="catalog-item-info">
+                      <div class="buttons">
+                        <a href="#" class="accent-button">
+                          <img src="img/icons/cart-white.svg" class="icon" alt="">
+                          <span>Adauga in cos</span>
+                        </a>
+                        <a href="#" class="view-button">
+                          <img src="img/icons/eye.svg" class="icon" alt="">
+                          <span>Vizualizare rapida</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="catalog-item-desc">
+                      <h5>Bluza eleganta pentru tinuta business decupata
+                        la spate</h5>
+                    </div>
+                    <div class="catalog-item-price">
+                      <strike>185 RON</strike>
+                      <span class="new-price">250 RON</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="catalog-item">
+                    <div class="catalog-item-img">
+                      <img src="img/catalog-1.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="catalog-item-info">
+                      <div class="buttons">
+                        <a href="#" class="accent-button">
+                          <img src="img/icons/cart-white.svg" class="icon" alt="">
+                          <span>Adauga in cos</span>
+                        </a>
+                        <a href="#" class="view-button">
+                          <img src="img/icons/eye.svg" class="icon" alt="">
+                          <span>Vizualizare rapida</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="catalog-item-desc">
+                      <h5>Bluza eleganta pentru tinuta business decupata
+                        la spate</h5>
+                    </div>
+                    <div class="catalog-item-price">
+                      185 RON
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="catalog-item">
+                    <div class="catalog-item-img">
+                      <img src="img/catalog-2.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="catalog-item-info">
+                      <div class="buttons">
+                        <a href="#" class="accent-button">
+                          <img src="img/icons/cart-white.svg" class="icon" alt="">
+                          <span>Adauga in cos</span>
+                        </a>
+                        <a href="#" class="view-button">
+                          <img src="img/icons/eye.svg" class="icon" alt="">
+                          <span>Vizualizare rapida</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="catalog-item-desc">
+                      <h5>Bluza eleganta pentru tinuta business decupata
+                        la spate</h5>
+                    </div>
+                    <div class="catalog-item-price">
+                      185 RON
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="catalog-item">
+                    <div class="catalog-item-img">
+                      <img src="img/catalog-3.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="catalog-item-info">
+                      <div class="buttons">
+                        <a href="#" class="accent-button">
+                          <img src="img/icons/cart-white.svg" class="icon" alt="">
+                          <span>Adauga in cos</span>
+                        </a>
+                        <a href="#" class="view-button">
+                          <img src="img/icons/eye.svg" class="icon" alt="">
+                          <span>Vizualizare rapida</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="catalog-item-desc">
+                      <h5>Bluza eleganta pentru tinuta business decupata
+                        la spate</h5>
+                    </div>
+                    <div class="catalog-item-price">
+                      185 RON
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      
+      </div>
+      
+    </div>
+
+    <section class="advantages">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="advantages-item">
+              <div class="advantages-item-icon">
+                <img src="img/icons/question.svg" alt="" class="icon">
+              </div>
+              <div class="advantages-item-text">
+                Ai intrebari? <br>
+                Un consultant iti va raspund
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="advantages-item">
+              <div class="advantages-item-icon">
+                <img src="img/icons/shipped.svg" alt="" class="icon">
+              </div>
+              <div class="advantages-item-text">
+                Livrare rapida <br>
+                in urmatoarea zi lucratoare
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="advantages-item">
+              <div class="advantages-item-icon">
+                <img src="img/icons/medal.svg" alt="" class="icon">
+              </div>
+              <div class="advantages-item-text">
+                Calitate garantata <br>
+                a produselor
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="footer-flex">
+          <div class="footer-item contacts">
+            <h6>Contacteaza-ne</h6>
+            <hr>
+            <div class="footer-item-text">
+              (+40) 031 2295804 <br>
+              Luni - vineri 9 - 21
+            </div>
+          </div>
+          <div class="footer-item social">
+            <h6>Urmareste-ne pe</h6>
+            <hr>
+            <div class="footer-item-text">
+              <a href="#"><img src="img/icons/facebook.svg" class="icon" alt=""></a>
+              <a href="#"><img src="img/icons/youtube.svg" class="icon" alt=""></a>
+              <a href="#"><img src="img/icons/instagram.svg" class="icon" alt=""></a>
+            </div>
+          </div>
+          <div class="footer-item company">
+            <h6>Companie</h6>
+            <hr>
+            <div class="footer-item-text">
+              <nav>
+                <div>
+                  <a href="#">Despre noi</a>
+                </div>
+                <div>
+                  <a href="#">Cariere</a>
+                </div>
+                <div>
+                  <a href="#">Contact</a>
+                </div>
+              </nav>
+    
+            </div>
+          </div>
+          <div class="footer-item asist">
+            <h6>Asistenta</h6>
+            <hr>
+            <div class="footer-item-text">
+              <ul>
+                <li><a href="#">Intrebari frecvente</a></li>
+                <li><a href="#">Informatii retur</a></li>
+                <li><a href="#">Informatii despre cookies</a></li>
+                <li><a href="#">Termeni si Conditii</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Garantie</a></li>
+                <li><a href="#">ANPC</a></li>
+                <li><a href="#">Politica de confidentialitate</a></li>
+                <li><a href="#">Modalitati de plata</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="logos-container d-sm-flex justify-content-between align-items-end">
+          <div class="logos">
+            <a href="#"><img src="img/logos/visa-mastercard.jpg" alt="" class="partners-logo"></a>
+            <a href="#"><img src="img/logos/price-ro.jpg" alt="" class="partners-logo"></a>
+            <a href="#"><img src="img/logos/biano.jpg" alt="" class="partners-logo"></a>
+            <a href="#"><img src="img/logos/shopmania.jpg" alt="" class="partners-logo"></a>
+            <a href="#"><img src="img/logos/compari.jpg" alt="" class="partners-logo"></a>
+          </div>
+          <div class="nemesis">
+            <a href="#"><img src="img/logos/nemesis-logo.png" alt="" class="partners-logo"></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright text-center">
+        © Copyright 2018 . Toate drepturile rezervate.
+      </div>
+    </footer>
+    </div>
+    
+    
+    <script src="js/scripts.min.js"></script>
+    
+    </body>
+    
+    </html>

@@ -74,6 +74,72 @@ header
 	height: 100px
 	width: 100%
 	background-color: #f3f3f3
+	.container-fluid
+		position: relative
+	.mobile-menu-wrap
+		display: none
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: rgba(#000,0.3)
+		z-index: 300
+		.mobile-sidebar
+			width: 250px
+			background-color: #cbcbcb
+			padding: 15px 0
+			position: absolute
+			height: 100vh
+			overflow-y: auto
+			top: 0
+			left: 0
+			z-index: 5
+			.mobile-search
+				width: 90%
+				margin: 0 auto
+				input
+					width: 100%
+					display: block
+			.mobile-menu
+				ul
+					margin: 0
+					padding: 0
+					li
+						list-style: none
+						&.active
+							>a
+								background-color: #000000
+								color: #ffffff
+						a
+							color: #000000
+							padding: 10px 15px
+							font-size: 18px
+							display: block
+							text-decoration: none
+							transition: color 0.25s ease, background-color 0.25s ease
+							border-bottom: 1px solid #fff
+							&:hover,&:focus
+								background-color: #000000
+								color: #ffffff
+				.submenu
+					li
+						a
+							padding-left: 30px
+				>ul
+					margin-top: 20px
+					>li
+						position: relative
+						>.plus
+							cursor: pointer
+							top: 0
+							position: absolute
+							color: #ffffff
+							font-weight: bold
+							font-size: 30px
+							right: 10px
+					.submenu
+						display: none
 	.header-line
 		display: flex
 		justify-content: flex-start
@@ -151,6 +217,12 @@ header
 			display: flex
 			margin-left: 10px
 			align-items: flex-end
+			.icon
+				cursor: pointer
+			&.active
+				color: $orange
+				.icon
+					filter: opacity(0.5) drop-shadow(0 0 0 $orange)
 			span
 				font-weight: bold
 				line-height: 1
@@ -159,7 +231,7 @@ header
 	height: 30px
 	width: auto
 
-.search
+.search, .mobile-search
 	position: relative
 	input
 		padding: 7px 10px
@@ -266,7 +338,7 @@ header
 		text-decoration: none
 
 
-.catalog
+.catalog-mainpage
 	position: relative
 	padding: 50px 0
 	h4
@@ -279,66 +351,67 @@ header
 		width: 90%
 		margin: 0 auto
 		margin-top: 30px
-		.catalog-item
-			position: relative
-			.discount
-				position: absolute
-				top: 0
-				left: 0
-				&-light 
-					text-align: right
-					margin-top: -30px
-					padding-right: 20px
-			&:hover
-				.catalog-item-info
-					display: block
-			&-desc
-				margin-top: 10px
-				h5
-					font-size: 20px
-			&-price
-				font-size: 20px
-				text-transform: uppercase
-				font-weight: bold
+		
+.catalog-item
+	position: relative
+	.discount
+		position: absolute
+		top: 0
+		left: 0
+		&-light 
+			text-align: right
+			margin-top: -30px
+			padding-right: 20px
+	&:hover
+		.catalog-item-info
+			display: block
+	&-desc
+		margin-top: 10px
+		h5
+			font-size: 20px
+	&-price
+		font-size: 20px
+		text-transform: uppercase
+		font-weight: bold
 
-				strike
-					font-size: 20px
-					line-height: 1.3
-					display: block
-				.new-price
-					line-height: 1.6
-					font-size: 26px
-					color: $red
-			&-info
-				display: none
-				position: absolute
-				bottom: 30%
-				.sizes
-					margin-bottom: 10px
-					div
-						display: inline-block
-						font-size: 23px
-						background-color: $purple
-						padding: 0 5px
-						margin: 5px
-						&.strike
-							 text-decoration: line-through
-							 opacity: 0.5
-				.buttons
-					a
-						text-decoration: none
-						height: 40px
-						width: 215px
-						text-align: center
-						display: inline-block
-						line-height: 40px
-						font-weight: bold
-						font-size: 18px
-						img
-							display: inline-block
-					.view-button
-						color: #000000
-						background-color: rgba($dark-purple,0.5)
+		strike
+			font-size: 20px
+			line-height: 1.3
+			display: block
+		.new-price
+			line-height: 1.6
+			font-size: 26px
+			color: $red
+	&-info
+		display: none
+		position: absolute
+		bottom: 30%
+		.sizes
+			margin-bottom: 10px
+			div
+				display: inline-block
+				font-size: 23px
+				background-color: $purple
+				padding: 0 5px
+				margin: 5px
+				&.strike
+						text-decoration: line-through
+						opacity: 0.5
+		.buttons
+			a
+				text-decoration: none
+				height: 40px
+				width: 215px
+				text-align: center
+				display: inline-block
+				line-height: 40px
+				font-weight: bold
+				font-size: 18px
+				img
+					display: inline-block
+			.view-button
+				color: #000000
+				background-color: rgba($dark-purple,0.5)
 
 .discount
 	display: inline-block
@@ -490,8 +563,179 @@ footer
 	background-color: #4d4d4d
 	padding: 10px 0
 	color: #ffffff
+
+.breadcrumb
+	margin: 0
+	nav
+		span,a 
+			font-size: 14px
+			color: #595959
 			
-						
+.catalog-banner
+	.banner-content
+		height: 80vh
+		display: flex
+		align-items: center
+		max-height: 600px
+		background-color: #a3a7ad
+		background-repeat: no-repeat
+		background-position: 0 0
+		background-size: cover
+		h1
+			font-size: 40px
+			color: #ffffff
+			font-weight: bold
+		p
+			color: #ffffff
+		.banner-text
+			padding-left: 10%
+			max-width: 700px
+
+.catalog-content
+	padding: 50px 0
+	.catalog-item
+		margin-top: 30px
+
+.catalog-filter
+	h3
+		font-size: 24px
+		margin: 10px 0
+		font-weight: bold
+	hr
+		background-color: #000000
+	a
+		display: block
+		padding: 5px 0
+		color: #000000
+	.filter-options
+		margin-top: 30px
+		background-color: #e6e6e6
+		padding: 15px 25px
+		.filter-tab
+			
+			position: relative
+		.tab-title
+			font-weight: bold
+			font-size: 18px
+			padding: 10px 0
+		.plus
+			cursor: pointer
+			padding: 0 5px
+			font-weight: bold
+			font-size: 30px
+			position: absolute
+			right: 0
+			top: 0
+		.tab-inputs
+			display: none
+			padding: 10px 0
+			label
+				display: block
+				padding: 5px 0
+				position: relative
+				padding-left: 30px
+				.checkmark
+					width: 20px
+					height: 20px
+					position: absolute
+					left: 0
+					background-color: #ffffff
+				input[type=checkbox]:checked ~ .checkmark
+					background-color: $checkbox
+				input[type=checkbox]:checked ~ .checkbox-value
+					color: $checkbox
+				input[type=checkbox]
+					opacity: 0
+					position: absolute
+
+.brise-widget
+	display: none
+	position: absolute
+	top: 100px
+	right: 0
+	z-index: 100
+	background-color: $light-bg
+	box-shadow: 0px 1px 15px #92a0b9
+	width: 100%
+	max-width: 400px
+	padding: 20px
+	
+	.cart-product-items
+		max-height: 356px
+		overflow-y: auto
+	.cart-product-item
+		margin-top: 10px
+		&-image
+			width: 100px
+			margin-right: 10px
+		&-info
+			flex-direction: column
+			justify-content: space-between
+			width: calc(100% - 110px)
+		.cart-product-item-price-edit
+		.price
+			font-weight: bold
+			font-size: 16px
+			line-height: 1.2
+			display: block
+		.old-price
+			display: block
+			font-size: 14px
+			line-height: 1.2
+			text-decoration: line-through
+		.new-price
+			font-weight: bold
+			line-height: 1.2
+			display: block
+			color: $red
+			font-size: 18px
+		&-edit
+			.edit-product-cart, .delete-product-cart
+				display: block
+				font-weight: bold
+				text-align: center
+			.edit-product-cart
+				color: $orange
+			.delete-product-cart
+				color: #000000
+
+.user-account
+	div
+		margin-top: 10px
+	input:not([type='submit'])
+		width: 220px
+		border: none
+		height: 33px
+		border-radius: 10px
+		background-color: #ffffff
+		padding: 0 10px
+		display: block
+		margin: 0 auto
+	.forget-pass
+		margin-top: 30px
+		div
+			margin-top: 0
+		text-align: center
+		line-height: 1.2
+	a
+		color: $orange
+
+.button
+	width: 220px;
+	height: 33px;
+	border-radius: 10px;
+	background-color: #fbefef;
+	border: 1px solid #cdcdcd;
+	line-height: 32px
+	display: block
+	margin: 0 auto
+	color: #000000
+	text-align: center
+	transition: background-color 0.25s ease
+	&:hover,&:focus
+		text-decoration: none
+		color: #000000
+		background-color: lighten(#fbefef, 2%)
 		
 	
 @media only screen and (max-width: 1300px) 
