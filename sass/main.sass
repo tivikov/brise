@@ -64,11 +64,16 @@ b, strong
 	color: #ffffff
 	font-weight: bold
 	font-size: 18px
+	transition: background-color 0.25s ease
+	border: none
+	text-align: center
 	&:hover, &:focus
 		text-decoration: none
 		color: #ffffff
+		background-color: lighten($orange,5%)
 	img
 		margin-top: -5px
+		
 
 header
 	height: 100px
@@ -337,8 +342,7 @@ header
 		color: #ffffff
 		text-decoration: none
 
-
-.catalog-mainpage
+.catalog-carousel-section
 	position: relative
 	padding: 50px 0
 	h4
@@ -567,6 +571,8 @@ footer
 .breadcrumb
 	margin: 0
 	nav
+		font-size: 14px
+		color: #595959
 		span,a 
 			font-size: 14px
 			color: #595959
@@ -719,6 +725,243 @@ footer
 		line-height: 1.2
 	a
 		color: $orange
+
+.product-info-wrap
+	padding: 30px 0
+	.product-gallery
+		width: 100px
+		&-item
+			margin-top: 15px
+			cursor: pointer
+		.slick-prev, .slick-next
+			top: -10px
+			z-index: 50
+			left: 40%
+			&::before
+				color: #000000
+		.slick-prev
+			transform-origin: center
+			transform: rotate(90deg)
+		.slick-next
+			transform-origin: center
+			transform: rotate(90deg)
+			top: 400px
+	.product-full-image
+		img
+			width: 100%
+		margin-left: 10px
+		width: calc(100% - 110px)
+	.product-name
+		font-size: 30px
+		font-weight: bold
+	.product-code
+		color: #989898
+	.product-price
+		margin-top: 20px
+		strike
+			line-height: 1
+			font-size: 18px
+		.new-price
+			color: $red
+			font-size: 26px
+			font-weight: bold
+			line-height: 1
+		.count-persent
+			font-size: 16px
+			line-height: 1
+			color: $red
+			font-weight: bold
+	.product-sizes
+		margin: 20px 0
+		padding: 30px 0
+		border:
+			top: 1px solid #c0c0c0
+			bottom: 1px solid #c0c0c0
+		
+	.product-radio-group
+		label
+			background-color: $purple
+			padding: 5px
+			font-size: 23px
+			cursor: pointer
+			&.active
+				background-color: $dark-purple
+			
+		input[type=radio]
+			position: absolute
+			opacity: 0
+	.product-buttons
+		padding: 20px 0
+		width: 80%
+		.accent-button
+			height: 50px
+			line-height: 50px
+			width: 100%
+		&-other
+			
+		.simple-button
+			display: inline-block
+			width: calc(50% - 10px)
+			margin-top: 20px
+			&:not(:nth-child(2n))
+				margin-right: 10px
+	.product-contact-phone
+		margin-top: 20px
+		padding: 30px 0
+		border:
+			top: 1px solid #c0c0c0
+		.manager-phone
+			.icon
+				height: 20px
+				margin-right: 10px
+			display: block
+			font-size: 22px
+			font-weight: bold
+
+.ruler
+	.icon
+		height: 16px
+	.ruler-text
+		font-size: 16px
+		color: #4d4d4d
+
+.product-details
+	padding: 30px 0
+	background-color: $purple
+	color: #4d4d4d
+	font-size: 16px
+	&-title
+		margin-top: 20px
+		font-size: 26px
+		font-weight: bold
+		color: #000
+		margin-bottom: 25px
+	line-height: 26px
+	ul
+		margin: 0
+		padding: 0
+		margin-left: 10px
+		li
+			margin: 10px 0
+	.product-long
+		margin-top: 15px
+		display: block
+	.ruler
+		margin-top: 15px
+
+.product-review
+	padding: 30px 0
+	background-color: #e5e5e5
+	h5
+		font-weight: bold
+		font-size: 26px
+		margin-bottom: 15px
+	.review-info
+		&-title
+			font-weight: bold
+			font-size: 22px
+		&-desc
+			font-size: 18px
+	.review-info-stars
+		margin: 0 30px
+	.simple-button
+		width: 230px
+
+.stars
+	.fa
+		font-size: 40px
+		&-star
+			color: $green
+
+#review-form
+	position: relative
+	max-width: 800px
+	padding: 15px 0
+	margin: 0 auto
+	border-radius: 20px
+	box-shadow: 0px 1px 10px #92a0b9
+	background-color: #e5e5e5
+	.review-form-title
+		font-size: 26px
+		font-weight: bold
+		text-align: center
+	.review-label
+		flex: 0 0 90px
+	form
+		padding: 0 10px
+		max-width: 600px
+		display: block
+		margin: 0 auto
+		.review-field
+			max-width: 600px
+			margin: 
+				right: auto
+				left: auto
+			margin-top: 20px
+		.review-input
+			flex-basis: calc(100% - 90px)
+		input:not([type=checkbox]), textarea
+			border-radius: 10px
+			padding: 0 10px
+			background-color: #ffffff
+			border: none
+			display: block
+			width: 100%
+		input:not([type=checkbox])
+			height: 34px
+		textarea
+			height: 130px
+			padding: 10px
+			resize: none
+		.review-input-checkbox
+			label
+				position: relative
+				padding-left: 40px
+				.checkmark
+					left: 0
+					top: 0
+					position: absolute
+					width: 30px
+					height: 30px
+					border-radius: 10px
+					background-color: #ffffff
+					border: 1px solid #cdcdcd
+				input
+					opacity: 0
+					position: absolute
+					&:checked ~ .checkmark
+						background-color: $dark-purple
+		.review-button-wrap
+			margin-top: 20px
+			text-align: center
+			>*
+				width: 230px
+				background-color: $purple
+				border: 1px solid #cdcdcd
+				color: #000
+				font-size: 20px
+				text-transform: none
+				font-weight: normal
+				
+
+.simple-button
+	display: block
+	font-size: 18px
+	color: #6b6b6b
+	text-align: center
+	text-decoration: none !important
+	height: 50px
+	outline: none !important
+	background-color: #ffffff
+	line-height: 50px
+	border: 1px solid #cdcdcd
+	transition: color 0.25s ease, border-color 0.25s ease
+	&:hover
+		color: #000000
+		border-color: #000
+	&:active
+		border: none
+		border: 1px solid #cdcdcd
 
 .button
 	width: 220px;

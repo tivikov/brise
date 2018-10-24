@@ -134,4 +134,47 @@ $(function(){
   $('.plus').click(function(){
     $(this).parent().find('.tab-inputs').slideToggle();
   })
+  $('.product-full-image').slick({
+    dots: false,
+    arrows: false,
+    draggable: false,
+    fade: true,
+    asNavFor: '.product-gallery'
+  })
+  $('.product-gallery').slick({
+    vertical: true,
+    verticalSwiping: true,
+    dots: false,
+    arrows: false,
+    slidesToScroll: 1,
+    slidesToShow: 4,
+    focusOnSelect: true,
+    infinite: false,
+    asNavFor: '.product-full-image'
+  })
+  $('.product-radio-group input[type=radio]:disabled').parent().css({
+    'text-decoration': 'line-through',
+    'opacity': '0.5',
+    'cursor': 'default'
+  })
+  $('.product-radio-group input[type=radio]').change(function(){
+    $('.product-radio-group input[type=radio]').parent().removeClass('active');
+    $(this).parent().addClass('active');
+  })
+  $('.open-popup-link').magnificPopup();
+  var $set = $('.rating-input-wrap .fa');
+  $('.rating-input-wrap').on('click', '.fa', function(){
+    $set.removeClass('fa-star-o');
+    $set.removeClass('fa-star');
+    var n = $set.index(this);
+    for(var i = 0;i<$set.length;i++){
+      if(i<=n){
+        $set.eq(i).addClass('fa-star')
+      }
+      else {
+        $set.eq(i).addClass('fa-star-o')
+      }
+    }
+    console.log(n);
+  })
 });
