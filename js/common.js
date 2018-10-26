@@ -37,7 +37,7 @@ $(function(){
     {
       breakpoint: 576,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         arrows: false
 
       }
@@ -64,7 +64,7 @@ $(function(){
     {
       breakpoint: 576,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         arrows: false
 
       }
@@ -94,6 +94,14 @@ $(function(){
         }
       }
     ]
+  })
+  $('.sizes >div').each(function(){
+    if(!$(this).hasClass('strike')){
+      $(this).click(function () {
+        $('.sizes >div').removeClass('choise');
+        $(this).addClass('choise');
+      })
+    }
   })
   $('.mobile-menu>ul>li').each(function(){
     if ($(this).find('ul').length > 0) {

@@ -28,6 +28,7 @@
   .catalog-item
     &-info
       display: block
+      position: static
 
   .banner	
     .main-banner
@@ -94,6 +95,15 @@
 
 // ≥576px
 +media-breakpoint-down(xs)
+  .discount
+    padding: 4px
+    font-size: 10px
+  .catalog-item .discount-light
+    margin-top: 0
+    text-align: left
+  .catalog-carousel-section
+    .recent-catalog-carousel
+      width: 100%
   #review-form
     padding: 30px 0
     .review-form-title
